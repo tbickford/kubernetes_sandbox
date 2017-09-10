@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: simpleapp
+  namespace: default
+  labels:
+    app: simpleapp
+spec:
+  selector:
+    app: simpleapp
+  type: NodePort
+  ports:
+  - name: web
+    port: 8080

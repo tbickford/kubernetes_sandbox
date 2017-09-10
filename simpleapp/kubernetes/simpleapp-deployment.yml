@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: simpleapp
+  namespace: default
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: simpleapp
+    spec:
+      containers:
+      - name: simpleapp
+        image: tbickford/simpleapp
+        imagePullPolicy: IfNotPresent
+        ports:
+        - name: web
+          containerPort: 8080
+
