@@ -8,7 +8,7 @@ metadata:
 spec:
   selector:
     app: simpleapp
-  type: NodePort
+  type: LoadBalancer
   ports:
   - name: web
     port: 8080
